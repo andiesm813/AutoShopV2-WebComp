@@ -42,7 +42,6 @@ export default class Home extends LitElement {
       justify-content: center;
       align-items: center;
       align-content: flex-start;
-      overflow: hidden;
       position: relative;
       padding: 24px;
       min-height: 240px;
