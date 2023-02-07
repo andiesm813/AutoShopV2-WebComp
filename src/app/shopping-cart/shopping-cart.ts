@@ -27,6 +27,8 @@ export default class ShoppingCart extends LitElement {
       position: relative;
       min-width: 960px;
       min-height: 50px;
+      flex-grow: 1;
+      flex-shrink: 0;
     }
     .inner-pages-header {
       background-color: #151725;
