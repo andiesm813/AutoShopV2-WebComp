@@ -282,6 +282,12 @@ export default class Home extends LitElement {
               <div class="row-layout group_2">
                 <igc-select ?outlined="${false}" label="Year" placeholder="Select Year" class="select">
                   <igc-select-item value="Option">
+                    2023
+                  </igc-select-item>
+                  <igc-select-item value="Option">
+                    2022
+                  </igc-select-item>
+                  <igc-select-item value="Option">
                     2021
                   </igc-select-item>
                   <igc-select-item value="Option">
@@ -298,24 +304,6 @@ export default class Home extends LitElement {
                   </igc-select-item>
                   <igc-select-item value="Option">
                     2016
-                  </igc-select-item>
-                  <igc-select-item value="Option">
-                    2015
-                  </igc-select-item>
-                  <igc-select-item value="Option">
-                    2014
-                  </igc-select-item>
-                  <igc-select-item value="Option">
-                    2013
-                  </igc-select-item>
-                  <igc-select-item value="Option">
-                    2012
-                  </igc-select-item>
-                  <igc-select-item value="Option">
-                    2011
-                  </igc-select-item>
-                  <igc-select-item value="Option">
-                    2010
                   </igc-select-item>
                 </igc-select>
                 <igc-select ?outlined="${false}" label="Brand" placeholder="Select Brand" ?disabled="${true}" class="select">
