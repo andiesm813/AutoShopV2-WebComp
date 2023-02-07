@@ -19,6 +19,16 @@ export default class ShoppingCart extends LitElement {
       display: flex;
       flex-direction: column;
     }
+    .page-content {
+      justify-content: flex-start;
+      align-items: stretch;
+      align-content: flex-start;
+      overflow: auto;
+      position: relative;
+      min-width: 728px;
+      min-height: 50px;
+      flex-shrink: 0;
+    }
     .inner-pages-header {
       background-color: #151725;
       background-image: url("/src/assets/NewHeader.png");
@@ -30,18 +40,21 @@ export default class ShoppingCart extends LitElement {
       position: relative;
       min-width: 50px;
       min-height: 140px;
+      flex-grow: 1;
+      flex-basis: 0;
     }
     .row-layout {
       display: flex;
     }
     .content {
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       align-content: flex-start;
       position: relative;
       padding: 48px 24px;
       min-width: 50px;
-      flex-shrink: 0;
+      flex-grow: 1;
+      flex-basis: 0;
     }
     .group {
       justify-content: flex-start;
@@ -66,7 +79,6 @@ export default class ShoppingCart extends LitElement {
       align-items: stretch;
       align-content: flex-start;
       position: relative;
-      min-width: 600px;
       min-height: 50px;
       flex-grow: 1;
       flex-basis: 0;
@@ -116,7 +128,6 @@ export default class ShoppingCart extends LitElement {
       min-width: 280px;
       min-height: 50px;
       max-width: 400px;
-      flex-grow: 1;
       flex-shrink: 0;
     }
     .group_8 {
@@ -169,6 +180,8 @@ export default class ShoppingCart extends LitElement {
       padding: 24px;
       min-width: 50px;
       min-height: 170px;
+      flex-grow: 1;
+      flex-basis: 0;
     }
     .group_12 {
       justify-content: flex-start;
@@ -197,9 +210,9 @@ export default class ShoppingCart extends LitElement {
       gap: 16px;
       position: relative;
       padding: 0 24px;
-      height: 50px;
       min-width: 50px;
       min-height: 50px;
+      flex-grow: 1;
       flex-shrink: 0;
     }
     .group_14 {
@@ -212,6 +225,7 @@ export default class ShoppingCart extends LitElement {
     }
     .image {
       object-fit: none;
+      height: 22px;
       min-width: 0;
       min-height: 0;
       flex-shrink: 0;
@@ -319,389 +333,391 @@ export default class ShoppingCart extends LitElement {
       <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
       <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet'>
       <link rel='stylesheet' href='../../ig-theme.css'>
-      <div class="column-layout inner-pages-header">
-        <img src="https://filetransfer.infragistics.com/public.php?service=files&t=5fdfefcda0f2d06be3b378700d990039&download" class="image" />
-        <p class="typography__body-1 text">
-          Enjoy 20% off on all your weekend purchases
-        </p>
-      </div>
-      <div class="row-layout content">
-        <div class="column-layout group">
-          <h5 class="h5">
-            Shopping Cart
-          </h5>
-          <div class="row-layout group_1">
-            <div class="column-layout group_2">
-              <igc-list class="list">
-                <igc-list-item>
-                  <div slot="start">
-                    <igc-avatar src="/src/assets/Alternator1.jpg" class="avatar"></igc-avatar>
-                  </div>
-                  <div>
-                    <div class="row-layout group_3">
-                      <p class="typography__body-1 text_1">
-                        Gold Alternator 
-                      </p>
-                      <div class="row-layout group_4">
-                        <div class="row-layout group_5">
-                          <p class="typography__body-1 text_2">
-                            Qty:
-                          </p>
-                          <div class="row-layout group_6">
-                            <igc-icon-button variant="flat">
-                              <span class="material-icons">
-                                remove
-                              </span>
-                              <igc-ripple></igc-ripple>
-                            </igc-icon-button>
-                            <p class="typography__body-1 text_3">
-                              1
-                            </p>
-                            <igc-icon-button variant="flat">
-                              <span class="material-icons">
-                                add
-                              </span>
-                              <igc-ripple></igc-ripple>
-                            </igc-icon-button>
-                          </div>
-                        </div>
-                        <p class="typography__body-1 text_4">
-                          $59.90
+      <div class="column-layout page-content">
+        <div class="column-layout inner-pages-header">
+          <img src="/src/assets/AutoDeals_Logo.svg" class="image" />
+          <p class="typography__body-1 text">
+            Enjoy 20% off on all your weekend purchases
+          </p>
+        </div>
+        <div class="row-layout content">
+          <div class="column-layout group">
+            <h5 class="h5">
+              Shopping Cart
+            </h5>
+            <div class="row-layout group_1">
+              <div class="column-layout group_2">
+                <igc-list class="list">
+                  <igc-list-item>
+                    <div slot="start">
+                      <igc-avatar src="/src/assets/Alternator1.jpg" class="avatar"></igc-avatar>
+                    </div>
+                    <div>
+                      <div class="row-layout group_3">
+                        <p class="typography__body-1 text_1">
+                          Gold Alternator 
                         </p>
+                        <div class="row-layout group_4">
+                          <div class="row-layout group_5">
+                            <p class="typography__body-1 text_2">
+                              Qty:
+                            </p>
+                            <div class="row-layout group_6">
+                              <igc-icon-button variant="flat">
+                                <span class="material-icons">
+                                  remove
+                                </span>
+                                <igc-ripple></igc-ripple>
+                              </igc-icon-button>
+                              <p class="typography__body-1 text_3">
+                                1
+                              </p>
+                              <igc-icon-button variant="flat">
+                                <span class="material-icons">
+                                  add
+                                </span>
+                                <igc-ripple></igc-ripple>
+                              </igc-icon-button>
+                            </div>
+                          </div>
+                          <p class="typography__body-1 text_4">
+                            $59.90
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div slot="end">
-                    <span class="material-icons icon">
-                      remove_shopping_cart
-                    </span>
-                  </div>
-                </igc-list-item>
-                <igc-list-item>
-                  <div slot="start">
-                    <igc-avatar src="/src/assets/Depositphotos_91150104_l-2015.jpg" class="avatar"></igc-avatar>
-                  </div>
-                  <div>
-                    <div class="row-layout group_3">
-                      <p class="typography__body-1 text_1">
-                        Tail Lamp Assembly
-                      </p>
-                      <div class="row-layout group_4">
-                        <div class="row-layout group_5">
-                          <p class="typography__body-1 text_2">
-                            Qty:
-                          </p>
-                          <div class="row-layout group_6">
-                            <igc-icon-button variant="flat">
-                              <span class="material-icons">
-                                remove
-                              </span>
-                              <igc-ripple></igc-ripple>
-                            </igc-icon-button>
-                            <p class="typography__body-1 text_3">
-                              1
-                            </p>
-                            <igc-icon-button variant="flat">
-                              <span class="material-icons">
-                                add
-                              </span>
-                              <igc-ripple></igc-ripple>
-                            </igc-icon-button>
-                          </div>
-                        </div>
-                        <p class="typography__body-1 text_4">
-                          $19.50
+                    <div slot="end">
+                      <span class="material-icons icon">
+                        remove_shopping_cart
+                      </span>
+                    </div>
+                  </igc-list-item>
+                  <igc-list-item>
+                    <div slot="start">
+                      <igc-avatar src="/src/assets/Depositphotos_91150104_l-2015.jpg" class="avatar"></igc-avatar>
+                    </div>
+                    <div>
+                      <div class="row-layout group_3">
+                        <p class="typography__body-1 text_1">
+                          Tail Lamp Assembly
                         </p>
+                        <div class="row-layout group_4">
+                          <div class="row-layout group_5">
+                            <p class="typography__body-1 text_2">
+                              Qty:
+                            </p>
+                            <div class="row-layout group_6">
+                              <igc-icon-button variant="flat">
+                                <span class="material-icons">
+                                  remove
+                                </span>
+                                <igc-ripple></igc-ripple>
+                              </igc-icon-button>
+                              <p class="typography__body-1 text_3">
+                                1
+                              </p>
+                              <igc-icon-button variant="flat">
+                                <span class="material-icons">
+                                  add
+                                </span>
+                                <igc-ripple></igc-ripple>
+                              </igc-icon-button>
+                            </div>
+                          </div>
+                          <p class="typography__body-1 text_4">
+                            $19.50
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div slot="end">
-                    <span class="material-icons icon">
-                      remove_shopping_cart
-                    </span>
-                  </div>
-                </igc-list-item>
-                <igc-list-item>
-                  <div slot="start">
-                    <igc-avatar src="/src/assets/Depositphotos_114068560_l-2015.jpg" class="avatar"></igc-avatar>
-                  </div>
-                  <div>
-                    <div class="row-layout group_3">
-                      <p class="typography__body-1 text_1">
-                        Winter Tires Set
-                      </p>
-                      <div class="row-layout group_4">
-                        <div class="row-layout group_5">
-                          <p class="typography__body-1 text_2">
-                            Qty:
-                          </p>
-                          <div class="row-layout group_6">
-                            <igc-icon-button variant="flat">
-                              <span class="material-icons">
-                                remove
-                              </span>
-                              <igc-ripple></igc-ripple>
-                            </igc-icon-button>
-                            <p class="typography__body-1 text_3">
-                              1
-                            </p>
-                            <igc-icon-button variant="flat">
-                              <span class="material-icons">
-                                add
-                              </span>
-                              <igc-ripple></igc-ripple>
-                            </igc-icon-button>
-                          </div>
-                        </div>
-                        <p class="typography__body-1 text_4">
-                          $41.50
+                    <div slot="end">
+                      <span class="material-icons icon">
+                        remove_shopping_cart
+                      </span>
+                    </div>
+                  </igc-list-item>
+                  <igc-list-item>
+                    <div slot="start">
+                      <igc-avatar src="/src/assets/Depositphotos_114068560_l-2015.jpg" class="avatar"></igc-avatar>
+                    </div>
+                    <div>
+                      <div class="row-layout group_3">
+                        <p class="typography__body-1 text_1">
+                          Winter Tires Set
                         </p>
+                        <div class="row-layout group_4">
+                          <div class="row-layout group_5">
+                            <p class="typography__body-1 text_2">
+                              Qty:
+                            </p>
+                            <div class="row-layout group_6">
+                              <igc-icon-button variant="flat">
+                                <span class="material-icons">
+                                  remove
+                                </span>
+                                <igc-ripple></igc-ripple>
+                              </igc-icon-button>
+                              <p class="typography__body-1 text_3">
+                                1
+                              </p>
+                              <igc-icon-button variant="flat">
+                                <span class="material-icons">
+                                  add
+                                </span>
+                                <igc-ripple></igc-ripple>
+                              </igc-icon-button>
+                            </div>
+                          </div>
+                          <p class="typography__body-1 text_4">
+                            $41.50
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div slot="end">
-                    <span class="material-icons icon">
-                      remove_shopping_cart
-                    </span>
-                  </div>
-                </igc-list-item>
-                <igc-list-item>
-                  <div slot="start">
-                    <igc-avatar src="/src/assets/Depositphotos_20993125_l-2015.jpg" class="avatar"></igc-avatar>
-                  </div>
-                  <div>
-                    <div class="row-layout group_3">
-                      <p class="typography__body-1 text_1">
-                        Oil Filter
-                      </p>
-                      <div class="row-layout group_4">
-                        <div class="row-layout group_5">
-                          <p class="typography__body-1 text_2">
-                            Qty:
-                          </p>
-                          <div class="row-layout group_6">
-                            <igc-icon-button variant="flat">
-                              <span class="material-icons">
-                                remove
-                              </span>
-                              <igc-ripple></igc-ripple>
-                            </igc-icon-button>
-                            <p class="typography__body-1 text_3">
-                              1
-                            </p>
-                            <igc-icon-button variant="flat">
-                              <span class="material-icons">
-                                add
-                              </span>
-                              <igc-ripple></igc-ripple>
-                            </igc-icon-button>
-                          </div>
-                        </div>
-                        <p class="typography__body-1 text_4">
-                          $49.50
+                    <div slot="end">
+                      <span class="material-icons icon">
+                        remove_shopping_cart
+                      </span>
+                    </div>
+                  </igc-list-item>
+                  <igc-list-item>
+                    <div slot="start">
+                      <igc-avatar src="/src/assets/Depositphotos_20993125_l-2015.jpg" class="avatar"></igc-avatar>
+                    </div>
+                    <div>
+                      <div class="row-layout group_3">
+                        <p class="typography__body-1 text_1">
+                          Oil Filter
                         </p>
+                        <div class="row-layout group_4">
+                          <div class="row-layout group_5">
+                            <p class="typography__body-1 text_2">
+                              Qty:
+                            </p>
+                            <div class="row-layout group_6">
+                              <igc-icon-button variant="flat">
+                                <span class="material-icons">
+                                  remove
+                                </span>
+                                <igc-ripple></igc-ripple>
+                              </igc-icon-button>
+                              <p class="typography__body-1 text_3">
+                                1
+                              </p>
+                              <igc-icon-button variant="flat">
+                                <span class="material-icons">
+                                  add
+                                </span>
+                                <igc-ripple></igc-ripple>
+                              </igc-icon-button>
+                            </div>
+                          </div>
+                          <p class="typography__body-1 text_4">
+                            $49.50
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div slot="end">
-                    <span class="material-icons icon">
-                      remove_shopping_cart
-                    </span>
-                  </div>
-                </igc-list-item>
-                <igc-list-item>
-                  <div slot="start">
-                    <igc-avatar src="/src/assets/Depositphotos_12011807_l-2015.jpg" class="avatar"></igc-avatar>
-                  </div>
-                  <div>
-                    <div class="row-layout group_3">
-                      <p class="typography__body-1 text_1">
-                        Headlight Assembly
-                      </p>
-                      <div class="row-layout group_4">
-                        <div class="row-layout group_5">
-                          <p class="typography__body-1 text_2">
-                            Qty:
-                          </p>
-                          <div class="row-layout group_6">
-                            <igc-icon-button variant="flat">
-                              <span class="material-icons">
-                                remove
-                              </span>
-                              <igc-ripple></igc-ripple>
-                            </igc-icon-button>
-                            <p class="typography__body-1 text_3">
-                              1
-                            </p>
-                            <igc-icon-button variant="flat">
-                              <span class="material-icons">
-                                add
-                              </span>
-                              <igc-ripple></igc-ripple>
-                            </igc-icon-button>
-                          </div>
-                        </div>
-                        <p class="typography__body-1 text_4">
-                          $29.90
+                    <div slot="end">
+                      <span class="material-icons icon">
+                        remove_shopping_cart
+                      </span>
+                    </div>
+                  </igc-list-item>
+                  <igc-list-item>
+                    <div slot="start">
+                      <igc-avatar src="/src/assets/Depositphotos_12011807_l-2015.jpg" class="avatar"></igc-avatar>
+                    </div>
+                    <div>
+                      <div class="row-layout group_3">
+                        <p class="typography__body-1 text_1">
+                          Headlight Assembly
                         </p>
+                        <div class="row-layout group_4">
+                          <div class="row-layout group_5">
+                            <p class="typography__body-1 text_2">
+                              Qty:
+                            </p>
+                            <div class="row-layout group_6">
+                              <igc-icon-button variant="flat">
+                                <span class="material-icons">
+                                  remove
+                                </span>
+                                <igc-ripple></igc-ripple>
+                              </igc-icon-button>
+                              <p class="typography__body-1 text_3">
+                                1
+                              </p>
+                              <igc-icon-button variant="flat">
+                                <span class="material-icons">
+                                  add
+                                </span>
+                                <igc-ripple></igc-ripple>
+                              </igc-icon-button>
+                            </div>
+                          </div>
+                          <p class="typography__body-1 text_4">
+                            $29.90
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div slot="end">
-                    <span class="material-icons icon">
-                      remove_shopping_cart
-                    </span>
-                  </div>
-                </igc-list-item>
-              </igc-list>
-            </div>
-            <div class="column-layout group_7">
-              <h6 class="h6">
-                Cart totals
-              </h6>
-              <div class="row-layout group_8">
-                <p class="typography__subtitle-2 content_1">
-                  Subtotal
-                </p>
-                <p class="typography__body-1 content_2">
-                  $198.30
-                </p>
+                    <div slot="end">
+                      <span class="material-icons icon">
+                        remove_shopping_cart
+                      </span>
+                    </div>
+                  </igc-list-item>
+                </igc-list>
               </div>
-              <div class="row-layout group_8">
-                <p class="typography__subtitle-2 content_1">
-                  Shipping
-                </p>
-                <p class="typography__body-1 content_2">
-                  $0
-                </p>
-              </div>
-              <div class="column-layout group_9">
-                <p class="typography__body-2 text_7">
-                  Shipping wiil be calculated at checkout
-                </p>
-                <a class="typography__body-2 hyperlink">
-                  Estimate shipping
-                </a>
-              </div>
-              <div class="row-layout group_10">
-                <h6 class="content_1">
-                  Total
+              <div class="column-layout group_7">
+                <h6 class="h6">
+                  Cart totals
                 </h6>
-                <h6 class="content_2">
-                  $198.30
-                </h6>
-              </div>
-              <div class="row-layout group_11">
-                <igc-button variant="flat" class="button">
-                  PROCEED TO CHECKOUT
-                  <igc-ripple></igc-ripple>
-                </igc-button>
+                <div class="row-layout group_8">
+                  <p class="typography__subtitle-2 content_1">
+                    Subtotal
+                  </p>
+                  <p class="typography__body-1 content_2">
+                    $198.30
+                  </p>
+                </div>
+                <div class="row-layout group_8">
+                  <p class="typography__subtitle-2 content_1">
+                    Shipping
+                  </p>
+                  <p class="typography__body-1 content_2">
+                    $0
+                  </p>
+                </div>
+                <div class="column-layout group_9">
+                  <p class="typography__body-2 text_7">
+                    Shipping wiil be calculated at checkout
+                  </p>
+                  <a class="typography__body-2 hyperlink">
+                    Estimate shipping
+                  </a>
+                </div>
+                <div class="row-layout group_10">
+                  <h6 class="content_1">
+                    Total
+                  </h6>
+                  <h6 class="content_2">
+                    $198.30
+                  </h6>
+                </div>
+                <div class="row-layout group_11">
+                  <igc-button variant="flat" class="button">
+                    PROCEED TO CHECKOUT
+                    <igc-ripple></igc-ripple>
+                  </igc-button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="row-layout sitemap">
-        <div class="column-layout group_12">
-          <p class="typography__subtitle-2 text_1">
-            Contact Us
-          </p>
-          <p class="typography__body-2 text_1">
-            1234 Street Name, CityName, ST
-          </p>
-          <p class="typography__body-2 text_1">
-             10520 United States
-          </p>
-          <p class="typography__subtitle-2 text_5">
-            Phone Number
-          </p>
-          <p class="typography__body-2 text_1">
-            1-234-567-8901
-          </p>
+        <div class="row-layout sitemap">
+          <div class="column-layout group_12">
+            <p class="typography__subtitle-2 text_1">
+              Contact Us
+            </p>
+            <p class="typography__body-2 text_1">
+              1234 Street Name, CityName, ST
+            </p>
+            <p class="typography__body-2 text_1">
+               10520 United States
+            </p>
+            <p class="typography__subtitle-2 text_5">
+              Phone Number
+            </p>
+            <p class="typography__body-2 text_1">
+              1-234-567-8901
+            </p>
+          </div>
+          <div class="column-layout group_13">
+            <p class="typography__subtitle-2 text_1">
+              Help
+            </p>
+            <p class="typography__body-2 text_1">
+              FAQ
+            </p>
+            <p class="typography__body-2 text_1">
+              Returns
+            </p>
+            <p class="typography__body-2 text_1">
+              Coupons &amp; Discounts
+            </p>
+            <p class="typography__body-2 text_1">
+              Shipping &amp; Returns
+            </p>
+          </div>
+          <div class="column-layout group_13">
+            <p class="typography__subtitle-2 text_1">
+              About Us
+            </p>
+            <p class="typography__body-2 text_1">
+              Company Info
+            </p>
+            <p class="typography__body-2 text_1">
+              Press Releases
+            </p>
+            <p class="typography__body-2 text_1">
+              Careers
+            </p>
+            <p class="typography__body-2 text_1">
+              Reviews
+            </p>
+          </div>
+          <div class="column-layout group_13">
+            <p class="typography__subtitle-2 text_1">
+              Services
+            </p>
+            <p class="typography__body-2 text_1">
+              Buy Online
+            </p>
+            <p class="typography__body-2 text_1">
+              In-Store
+            </p>
+            <p class="typography__body-2 text_1">
+              Repair Help
+            </p>
+            <p class="typography__body-2 text_1">
+              Find a Repair Shop
+            </p>
+          </div>
+          <div class="column-layout group_13">
+            <p class="typography__subtitle-2 text_1">
+              Blog
+            </p>
+            <p class="typography__body-2 text_1">
+              Car Building Basics
+            </p>
+            <p class="typography__body-2 text_1">
+              Do it Yourself
+            </p>
+            <p class="typography__body-2 text_1">
+              Your Home Workshop
+            </p>
+            <p class="typography__body-2 text_1">
+              Advanced Bulding
+            </p>
+          </div>
         </div>
-        <div class="column-layout group_13">
-          <p class="typography__subtitle-2 text_1">
-            Help
+        <div class="row-layout footer">
+          <p class="typography__body-2 text_6">
+            Copyright ©2021 AutoShop.com, Inc. All Rights Reserved.
           </p>
-          <p class="typography__body-2 text_1">
-            FAQ
-          </p>
-          <p class="typography__body-2 text_1">
-            Returns
-          </p>
-          <p class="typography__body-2 text_1">
-            Coupons &amp; Discounts
-          </p>
-          <p class="typography__body-2 text_1">
-            Shipping &amp; Returns
-          </p>
-        </div>
-        <div class="column-layout group_13">
-          <p class="typography__subtitle-2 text_1">
-            About Us
-          </p>
-          <p class="typography__body-2 text_1">
-            Company Info
-          </p>
-          <p class="typography__body-2 text_1">
-            Press Releases
-          </p>
-          <p class="typography__body-2 text_1">
-            Careers
-          </p>
-          <p class="typography__body-2 text_1">
-            Reviews
-          </p>
-        </div>
-        <div class="column-layout group_13">
-          <p class="typography__subtitle-2 text_1">
-            Services
-          </p>
-          <p class="typography__body-2 text_1">
-            Buy Online
-          </p>
-          <p class="typography__body-2 text_1">
-            In-Store
-          </p>
-          <p class="typography__body-2 text_1">
-            Repair Help
-          </p>
-          <p class="typography__body-2 text_1">
-            Find a Repair Shop
-          </p>
-        </div>
-        <div class="column-layout group_13">
-          <p class="typography__subtitle-2 text_1">
-            Blog
-          </p>
-          <p class="typography__body-2 text_1">
-            Car Building Basics
-          </p>
-          <p class="typography__body-2 text_1">
-            Do it Yourself
-          </p>
-          <p class="typography__body-2 text_1">
-            Your Home Workshop
-          </p>
-          <p class="typography__body-2 text_1">
-            Advanced Bulding
-          </p>
-        </div>
-      </div>
-      <div class="row-layout footer">
-        <p class="typography__body-2 text_6">
-          Copyright ©2021 AutoShop.com, Inc. All Rights Reserved.
-        </p>
-        <div class="row-layout group_14">
-          <p class="typography__body-2 text_8">
-            Terms of Use
-          </p>
-          <p class="typography__body-2 text_8">
-            Privacy Policy
-          </p>
-          <p class="typography__body-2 text_8">
-            Site Map
-          </p>
+          <div class="row-layout group_14">
+            <p class="typography__body-2 text_8">
+              Terms of Use
+            </p>
+            <p class="typography__body-2 text_8">
+              Privacy Policy
+            </p>
+            <p class="typography__body-2 text_8">
+              Site Map
+            </p>
+          </div>
         </div>
       </div>
     `;
