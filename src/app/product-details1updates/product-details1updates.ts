@@ -1,11 +1,12 @@
 import { html, css, LitElement } from 'lit';
 import { customElement } from 'lit/decorators.js';
+import { Router } from '@vaadin/router';
 import { defineComponents, IgcBadgeComponent, IgcButtonComponent, IgcCardComponent, IgcIconComponent, IgcRatingComponent, IgcRippleComponent, IgcSelectComponent } from 'igniteui-webcomponents';
 
 defineComponents(IgcRatingComponent, IgcBadgeComponent, IgcSelectComponent, IgcButtonComponent, IgcIconComponent, IgcRippleComponent, IgcCardComponent);
 
-@customElement('app-product-details')
-export default class ProductDetails extends LitElement {
+@customElement('app-product-details1updates')
+export default class ProductDetails1Updates extends LitElement {
   static styles = css`
     :host {
       height: 100%;
@@ -49,6 +50,8 @@ export default class ProductDetails extends LitElement {
       position: relative;
       padding: 48px 24px;
       min-width: 50px;
+      flex-grow: 1;
+      flex-shrink: 0;
     }
     .group {
       justify-content: flex-start;
@@ -56,7 +59,6 @@ export default class ProductDetails extends LitElement {
       align-content: flex-start;
       min-width: 50px;
       max-width: 1680px;
-      flex-grow: 1;
       flex-shrink: 0;
     }
     .row-layout {
@@ -75,53 +77,61 @@ export default class ProductDetails extends LitElement {
       justify-content: flex-start;
       align-items: flex-start;
       align-content: flex-start;
+      gap: 32px;
       position: relative;
       min-height: 50px;
+      flex-grow: 1;
       flex-shrink: 0;
     }
-    .group_3 {
+    .images {
       justify-content: flex-start;
       align-items: stretch;
       align-content: flex-start;
       gap: 8px;
-      margin: 0 8px 0 0;
-      min-width: 100px;
-      min-height: 100px;
+      position: relative;
+      min-width: 50px;
+      min-height: 50px;
+    }
+    .thumbs {
+      justify-content: flex-start;
+      align-items: flex-start;
+      align-content: flex-start;
+      gap: 8px;
+      position: relative;
       flex-shrink: 0;
     }
-    .group_4 {
+    .thumb-2 {
       background-image: url("/src/assets/Alternator1.jpg");
-      background-size: cover;
-      border-color: hsla(var(--ig-gray-200));
-      border-width: 1px;
-      border-style: solid;
-      position: relative;
-      min-width: 100px;
-      min-height: 100px;
-    }
-    .group_5 {
-      background-image: url("/src/assets/Alternator3.png");
       background-size: cover;
       background-repeat: no-repeat;
       border-color: hsla(var(--ig-gray-200));
       border-width: 1px;
       border-style: solid;
+      justify-content: flex-start;
+      align-items: stretch;
+      align-content: flex-start;
       position: relative;
       min-width: 100px;
       min-height: 100px;
     }
-    .group_6 {
+    .thumb-1 {
       background-image: url("/src/assets/Alternator2.png");
       background-size: cover;
       background-repeat: no-repeat;
       border-color: hsla(var(--ig-gray-200));
       border-width: 1px;
       border-style: solid;
+      justify-content: flex-start;
+      align-items: stretch;
+      align-content: flex-start;
       position: relative;
       min-width: 100px;
       min-height: 100px;
     }
-    .group_7 {
+    .thumb {
+      background-image: url("/src/assets/Alternator3.png");
+      background-size: cover;
+      background-repeat: no-repeat;
       border-color: hsla(var(--ig-gray-200));
       border-width: 1px;
       border-style: solid;
@@ -129,7 +139,17 @@ export default class ProductDetails extends LitElement {
       align-items: stretch;
       align-content: flex-start;
       position: relative;
-      margin: 0 32px 0 0;
+      min-width: 100px;
+      min-height: 100px;
+    }
+    .product-image {
+      border-color: hsla(var(--ig-gray-200));
+      border-width: 1px;
+      border-style: solid;
+      justify-content: flex-start;
+      align-items: stretch;
+      align-content: flex-start;
+      position: relative;
       min-width: 240px;
       min-height: 240px;
       max-width: 560px;
@@ -137,7 +157,7 @@ export default class ProductDetails extends LitElement {
       flex-grow: 1;
       flex-basis: 50%;
     }
-    .group_8 {
+    .group_3 {
       flex-wrap: wrap;
       justify-content: flex-start;
       align-items: stretch;
@@ -147,16 +167,16 @@ export default class ProductDetails extends LitElement {
       min-width: 400px;
       min-height: 50px;
       flex-grow: 1;
-      flex-basis: 50%;
+      flex-basis: 0;
     }
-    .group_9 {
+    .group_4 {
       justify-content: flex-start;
       align-items: center;
       align-content: flex-start;
       position: relative;
       min-width: 50px;
     }
-    .group_10 {
+    .group_5 {
       justify-content: flex-start;
       align-items: center;
       align-content: flex-start;
@@ -164,7 +184,7 @@ export default class ProductDetails extends LitElement {
       margin: 0 0 16px;
       min-width: 50px;
     }
-    .group_11 {
+    .group_6 {
       justify-content: flex-start;
       align-items: stretch;
       align-content: flex-start;
@@ -173,19 +193,19 @@ export default class ProductDetails extends LitElement {
       min-width: 50px;
       min-height: 50px;
     }
-    .group_12 {
+    .group_7 {
       justify-content: flex-start;
       align-items: stretch;
       align-content: flex-start;
       position: relative;
       margin: 0 40px 0 0;
-      min-width: 260px;
+      min-width: 240px;
       min-height: 50px;
-      max-width: 500px;
+      max-width: 400px;
       flex-grow: 1;
-      flex-basis: 30%;
+      flex-basis: 0;
     }
-    .group_13 {
+    .group_8 {
       background-color: transparent;
       justify-content: flex-start;
       align-items: baseline;
@@ -194,7 +214,7 @@ export default class ProductDetails extends LitElement {
       min-width: 50px;
       min-height: 32px;
     }
-    .group_14 {
+    .group_9 {
       background-color: hsla(var(--ig-gray-100));
       justify-content: flex-start;
       align-items: baseline;
@@ -203,18 +223,18 @@ export default class ProductDetails extends LitElement {
       min-width: 50px;
       min-height: 32px;
     }
-    .group_15 {
+    .group_10 {
       justify-content: flex-start;
       align-items: stretch;
       align-content: flex-start;
       position: relative;
       min-width: 50px;
       min-height: 50px;
-      max-width: 1000px;
-      flex-grow: 1;
-      flex-basis: 70%;
+      max-width: 800px;
+      flex-grow: 2;
+      flex-basis: 0;
     }
-    .group_16 {
+    .group_11 {
       flex-wrap: wrap;
       justify-content: flex-start;
       align-items: center;
@@ -223,7 +243,7 @@ export default class ProductDetails extends LitElement {
       min-width: 50px;
       min-height: 40px;
     }
-    .group_17 {
+    .group_12 {
       flex-wrap: wrap;
       justify-content: flex-start;
       align-items: stretch;
@@ -238,7 +258,7 @@ export default class ProductDetails extends LitElement {
       max-width: 200px;
       flex-shrink: 0;
     }
-    .group_18 {
+    .group_13 {
       justify-content: flex-start;
       align-items: stretch;
       align-content: flex-start;
@@ -258,7 +278,7 @@ export default class ProductDetails extends LitElement {
       min-width: 50px;
       min-height: 170px;
     }
-    .group_19 {
+    .group_14 {
       justify-content: flex-start;
       align-items: flex-start;
       align-content: flex-start;
@@ -266,7 +286,7 @@ export default class ProductDetails extends LitElement {
       min-width: 50px;
       min-height: 50px;
     }
-    .group_20 {
+    .group_15 {
       justify-content: flex-start;
       align-items: stretch;
       align-content: flex-start;
@@ -288,9 +308,8 @@ export default class ProductDetails extends LitElement {
       height: 50px;
       min-width: 50px;
       min-height: 50px;
-      flex-shrink: 0;
     }
-    .group_21 {
+    .group_16 {
       justify-content: center;
       align-items: center;
       align-content: flex-start;
@@ -335,7 +354,7 @@ export default class ProductDetails extends LitElement {
       min-width: min-content;
       flex-shrink: 0;
     }
-    .image_1 {
+    .large-image {
       object-fit: contain;
       flex-grow: 1;
       flex-basis: 0;
@@ -418,7 +437,7 @@ export default class ProductDetails extends LitElement {
       height: max-content;
       min-width: min-content;
     }
-    .image_2 {
+    .image_1 {
       height: 100%;
     }
     .h6 {
@@ -518,13 +537,13 @@ export default class ProductDetails extends LitElement {
         <div class="column-layout content">
           <div class="column-layout group">
             <div class="row-layout group_1">
-              <a class="typography__body-2 hyperlink">
+              <a class="typography__body-2 hyperlink" @click="${() => Router.go('/home')}">
                 Home
               </a>
               <p class="typography__body-2 text_1">
                 /
               </p>
-              <a class="typography__body-2 hyperlink">
+              <a class="typography__body-2 hyperlink" @click="${() => Router.go('/all-products')}">
                 Auto Body Parts
               </a>
               <p class="typography__body-2 text_1">
@@ -547,20 +566,22 @@ export default class ProductDetails extends LitElement {
               </p>
             </div>
             <div class="row-layout group_2">
+              <div class="row-layout images">
+                <div class="column-layout thumbs">
+                  <div class="row-layout thumb-2"></div>
+                  <div class="row-layout thumb-1"></div>
+                  <div class="row-layout thumb"></div>
+                </div>
+                <div class="row-layout product-image">
+                  <img src="/src/assets/Alternator1.jpg" class="large-image" />
+                </div>
+              </div>
               <div class="column-layout group_3">
-                <div class="group_4"></div>
-                <div class="group_5"></div>
-                <div class="group_6"></div>
-              </div>
-              <div class="row-layout group_7">
-                <img src="/src/assets/Alternator1.jpg" class="image_1" />
-              </div>
-              <div class="column-layout group_8">
                 <h5 class="content_1">
                   Gold Alternator
 
                 </h5>
-                <div class="row-layout group_9">
+                <div class="row-layout group_4">
                   <igc-rating value="4.5" size="medium" class="rating"></igc-rating>
                   <a class="typography__body-2 hyperlink_2">
                     (2 customer reviews)
@@ -581,7 +602,7 @@ export default class ProductDetails extends LitElement {
                 <igc-badge variant="success" class="badge">
                   IN STOCK
                 </igc-badge>
-                <div class="row-layout group_10">
+                <div class="row-layout group_5">
                   <igc-select ?outlined="${false}" label="Quantitiy" value="1" class="select">
                     <igc-select-item value="1" ?selected="${true}">
                       1
@@ -610,12 +631,12 @@ export default class ProductDetails extends LitElement {
                 </igc-button>
               </div>
             </div>
-            <div class="row-layout group_11">
-              <div class="column-layout group_12">
+            <div class="row-layout group_6">
+              <div class="column-layout group_7">
                 <h5 class="h5">
                   Product Specifications
                 </h5>
-                <div class="row-layout group_13">
+                <div class="row-layout group_8">
                   <p class="typography__body-1 text_5">
                     Part #  
                   </p>
@@ -623,7 +644,7 @@ export default class ProductDetails extends LitElement {
                     ABC123-456789
                   </p>
                 </div>
-                <div class="row-layout group_14">
+                <div class="row-layout group_9">
                   <p class="typography__body-1 text_5">
                     SKU #  
                   </p>
@@ -631,7 +652,7 @@ export default class ProductDetails extends LitElement {
                     740988
                   </p>
                 </div>
-                <div class="row-layout group_13">
+                <div class="row-layout group_8">
                   <p class="typography__body-1 text_5">
                     Weight
                   </p>
@@ -639,7 +660,7 @@ export default class ProductDetails extends LitElement {
                     10 lbs
                   </p>
                 </div>
-                <div class="row-layout group_14">
+                <div class="row-layout group_9">
                   <p class="typography__body-1 text_5">
                     Type
                   </p>
@@ -647,7 +668,7 @@ export default class ProductDetails extends LitElement {
                     Alternator
                   </p>
                 </div>
-                <div class="row-layout group_13">
+                <div class="row-layout group_8">
                   <p class="typography__body-1 text_5">
                     System Voltage  
                   </p>
@@ -655,7 +676,7 @@ export default class ProductDetails extends LitElement {
                     12 V
                   </p>
                 </div>
-                <div class="row-layout group_14">
+                <div class="row-layout group_9">
                   <p class="typography__body-1 text_6">
                     Pulleys Included  
                   </p>
@@ -664,11 +685,11 @@ export default class ProductDetails extends LitElement {
                   </p>
                 </div>
               </div>
-              <div class="column-layout group_15">
+              <div class="column-layout group_10">
                 <h5 class="h5_1">
                   Product Description
                 </h5>
-                <div class="row-layout group_16">
+                <div class="row-layout group_11">
                   <span class="material-icons icon">
                     check_circle
                   </span>
@@ -676,7 +697,7 @@ export default class ProductDetails extends LitElement {
                     Key components are greased to help with long term reliability in harsh conditions
                   </p>
                 </div>
-                <div class="row-layout group_16">
+                <div class="row-layout group_11">
                   <span class="material-icons icon">
                     check_circle
                   </span>
@@ -684,7 +705,7 @@ export default class ProductDetails extends LitElement {
                     Every unit is built with 100% NEW components that are designed to meet the highest quality standards
                   </p>
                 </div>
-                <div class="row-layout group_16">
+                <div class="row-layout group_11">
                   <span class="material-icons icon">
                     check_circle
                   </span>
@@ -700,10 +721,10 @@ export default class ProductDetails extends LitElement {
             <h5 class="h5_2">
               Customers Also Purchased
             </h5>
-            <div class="row-layout group_17">
+            <div class="row-layout group_12">
               <igc-card ?elevated="${true}" class="card">
                 <igc-card-media class="media-content">
-                  <img src="/src/assets/Alternator1.jpg" class="image_2" />
+                  <img src="/src/assets/Alternator1.jpg" class="image_1" />
                 </igc-card-media>
                 <igc-card-header>
                   <h3 slot="title">
@@ -714,7 +735,7 @@ export default class ProductDetails extends LitElement {
                   </h5>
                 </igc-card-header>
                 <igc-card-content class="body-content">
-                  <div class="row-layout group_18">
+                  <div class="row-layout group_13">
                     <igc-rating value="4.5" size="small" class="rating"></igc-rating>
                   </div>
                   <h6 class="content_2">
@@ -733,7 +754,7 @@ export default class ProductDetails extends LitElement {
               </igc-card>
               <igc-card ?elevated="${true}" class="card">
                 <igc-card-media class="media-content">
-                  <img src="/src/assets/Depositphotos_91150104_l-2015.jpg" class="image_2" />
+                  <img src="/src/assets/Depositphotos_91150104_l-2015.jpg" class="image_1" />
                 </igc-card-media>
                 <igc-card-header>
                   <h3 slot="title">
@@ -744,7 +765,7 @@ export default class ProductDetails extends LitElement {
                   </h5>
                 </igc-card-header>
                 <igc-card-content class="body-content">
-                  <div class="row-layout group_18">
+                  <div class="row-layout group_13">
                     <igc-rating value="4" size="small" class="rating"></igc-rating>
                   </div>
                   <h6 class="content_2">
@@ -763,7 +784,7 @@ export default class ProductDetails extends LitElement {
               </igc-card>
               <igc-card ?elevated="${true}" class="card">
                 <igc-card-media class="media-content">
-                  <img src="/src/assets/Depositphotos_39703145_l-2015.jpg" class="image_2" />
+                  <img src="/src/assets/Depositphotos_39703145_l-2015.jpg" class="image_1" />
                 </igc-card-media>
                 <igc-card-header>
                   <h3 slot="title">
@@ -774,7 +795,7 @@ export default class ProductDetails extends LitElement {
                   </h5>
                 </igc-card-header>
                 <igc-card-content class="body-content">
-                  <div class="row-layout group_18">
+                  <div class="row-layout group_13">
                     <igc-rating value="3.5" size="small" class="rating"></igc-rating>
                   </div>
                   <h6 class="content_2">
@@ -793,7 +814,7 @@ export default class ProductDetails extends LitElement {
               </igc-card>
               <igc-card ?elevated="${true}" class="card">
                 <igc-card-media class="media-content">
-                  <img src="/src/assets/Depositphotos_20993125_l-2015.jpg" class="image_2" />
+                  <img src="/src/assets/Depositphotos_20993125_l-2015.jpg" class="image_1" />
                 </igc-card-media>
                 <igc-card-header>
                   <h3 slot="title">
@@ -804,7 +825,7 @@ export default class ProductDetails extends LitElement {
                   </h5>
                 </igc-card-header>
                 <igc-card-content class="body-content">
-                  <div class="row-layout group_18">
+                  <div class="row-layout group_13">
                     <igc-rating value="5" size="small" class="rating"></igc-rating>
                   </div>
                   <h6 class="content_2">
@@ -823,7 +844,7 @@ export default class ProductDetails extends LitElement {
               </igc-card>
               <igc-card ?elevated="${true}" class="card">
                 <igc-card-media class="media-content">
-                  <img src="/src/assets/Depositphotos_12011807_l-2015.jpg" class="image_2" />
+                  <img src="/src/assets/Depositphotos_12011807_l-2015.jpg" class="image_1" />
                 </igc-card-media>
                 <igc-card-header>
                   <h3 slot="title">
@@ -834,7 +855,7 @@ export default class ProductDetails extends LitElement {
                   </h5>
                 </igc-card-header>
                 <igc-card-content class="body-content">
-                  <div class="row-layout group_18">
+                  <div class="row-layout group_13">
                     <igc-rating value="3.5" size="small" class="rating"></igc-rating>
                   </div>
                   <h6 class="content_2">
@@ -853,7 +874,7 @@ export default class ProductDetails extends LitElement {
               </igc-card>
               <igc-card ?elevated="${true}" class="card">
                 <igc-card-media class="media-content">
-                  <img src="/src/assets/Depositphotos_114068560_l-2015.jpg" class="image_2" />
+                  <img src="/src/assets/Depositphotos_114068560_l-2015.jpg" class="image_1" />
                 </igc-card-media>
                 <igc-card-header>
                   <h3 slot="title">
@@ -864,7 +885,7 @@ export default class ProductDetails extends LitElement {
                   </h5>
                 </igc-card-header>
                 <igc-card-content class="body-content">
-                  <div class="row-layout group_18">
+                  <div class="row-layout group_13">
                     <igc-rating value="4.5" size="small" class="rating"></igc-rating>
                   </div>
                   <h6 class="content_2">
@@ -883,7 +904,7 @@ export default class ProductDetails extends LitElement {
               </igc-card>
               <igc-card ?elevated="${true}" class="card">
                 <igc-card-media class="media-content">
-                  <img src="/src/assets/Depositphotos_51128759_l-2015.jpg" class="image_2" />
+                  <img src="/src/assets/Depositphotos_51128759_l-2015.jpg" class="image_1" />
                 </igc-card-media>
                 <igc-card-header>
                   <h3 slot="title">
@@ -894,7 +915,7 @@ export default class ProductDetails extends LitElement {
                   </h5>
                 </igc-card-header>
                 <igc-card-content class="body-content">
-                  <div class="row-layout group_18">
+                  <div class="row-layout group_13">
                     <igc-rating value="5" size="small" class="rating"></igc-rating>
                   </div>
                   <h6 class="h6">
@@ -913,7 +934,7 @@ export default class ProductDetails extends LitElement {
               </igc-card>
               <igc-card ?elevated="${true}" class="card">
                 <igc-card-media class="media-content">
-                  <img src="/src/assets/Depositphotos_63371615_l-2015.jpg" class="image_2" />
+                  <img src="/src/assets/Depositphotos_63371615_l-2015.jpg" class="image_1" />
                 </igc-card-media>
                 <igc-card-header>
                   <h3 slot="title">
@@ -924,7 +945,7 @@ export default class ProductDetails extends LitElement {
                   </h5>
                 </igc-card-header>
                 <igc-card-content class="body-content">
-                  <div class="row-layout group_18">
+                  <div class="row-layout group_13">
                     <igc-rating value="4" size="small" class="rating"></igc-rating>
                   </div>
                   <h6 class="h6">
@@ -945,7 +966,7 @@ export default class ProductDetails extends LitElement {
           </div>
         </div>
         <div class="row-layout sitemap">
-          <div class="column-layout group_19">
+          <div class="column-layout group_14">
             <p class="typography__subtitle-2 content_1">
               Contact Us
             </p>
@@ -962,7 +983,7 @@ export default class ProductDetails extends LitElement {
               1-234-567-8901
             </p>
           </div>
-          <div class="column-layout group_20">
+          <div class="column-layout group_15">
             <p class="typography__subtitle-2 content_1">
               Help
             </p>
@@ -979,7 +1000,7 @@ export default class ProductDetails extends LitElement {
               Shipping &amp; Returns
             </p>
           </div>
-          <div class="column-layout group_20">
+          <div class="column-layout group_15">
             <p class="typography__subtitle-2 content_1">
               About Us
             </p>
@@ -996,7 +1017,7 @@ export default class ProductDetails extends LitElement {
               Reviews
             </p>
           </div>
-          <div class="column-layout group_20">
+          <div class="column-layout group_15">
             <p class="typography__subtitle-2 content_1">
               Services
             </p>
@@ -1013,7 +1034,7 @@ export default class ProductDetails extends LitElement {
               Find a Repair Shop
             </p>
           </div>
-          <div class="column-layout group_20">
+          <div class="column-layout group_15">
             <p class="typography__subtitle-2 content_1">
               Blog
             </p>
@@ -1035,7 +1056,7 @@ export default class ProductDetails extends LitElement {
           <p class="typography__body-2 text_10">
             Copyright ©2021 AutoShop.com, Inc. All Rights Reserved.
           </p>
-          <div class="row-layout group_21">
+          <div class="row-layout group_16">
             <p class="typography__body-2 text_11">
               Terms of Use
             </p>
