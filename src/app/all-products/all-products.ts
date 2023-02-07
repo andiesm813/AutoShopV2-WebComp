@@ -53,6 +53,7 @@ export default class AllProducts extends LitElement {
       padding: 48px 24px;
       min-width: 50px;
       min-height: 50px;
+      flex-grow: 1;
       flex-shrink: 0;
     }
     .group {

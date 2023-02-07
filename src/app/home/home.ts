@@ -94,6 +94,8 @@ export default class Home extends LitElement {
       padding: 48px 24px;
       min-width: 50px;
       min-height: 50px;
+      flex-grow: 1;
+      flex-shrink: 0;
     }
     .group_4 {
       flex-wrap: wrap;

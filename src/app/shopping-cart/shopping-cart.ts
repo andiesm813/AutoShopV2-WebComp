@@ -50,6 +50,7 @@ export default class ShoppingCart extends LitElement {
       position: relative;
       padding: 48px 24px;
       min-width: 50px;
+      flex-grow: 1;
       flex-shrink: 0;
     }
     .group {

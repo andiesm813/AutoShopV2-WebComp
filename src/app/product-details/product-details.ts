@@ -50,6 +50,8 @@ export default class ProductDetails extends LitElement {
       position: relative;
       padding: 48px 24px;
       min-width: 50px;
+      flex-grow: 1;
+      flex-shrink: 0;
     }
     .group {
       justify-content: flex-start;
@@ -149,8 +151,11 @@ export default class ProductDetails extends LitElement {
       align-content: flex-start;
       position: relative;
       min-width: 240px;
-      min-height: 50px;
+      min-height: 240px;
       max-width: 560px;
+      max-height: 560px;
+      flex-grow: 1;
+      flex-basis: 50%;
     }
     .group_3 {
       flex-wrap: wrap;
@@ -351,6 +356,8 @@ export default class ProductDetails extends LitElement {
     }
     .large-image {
       object-fit: contain;
+      flex-grow: 1;
+      flex-basis: 0;
     }
     .content_1 {
       height: max-content;
