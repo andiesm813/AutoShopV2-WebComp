@@ -14,6 +14,7 @@ export default class ShoppingCart extends LitElement {
       justify-content: flex-start;
       align-items: stretch;
       align-content: flex-start;
+      overflow: auto;
     }
     .column-layout {
       display: flex;
@@ -23,11 +24,9 @@ export default class ShoppingCart extends LitElement {
       justify-content: flex-start;
       align-items: stretch;
       align-content: flex-start;
-      overflow: auto;
       position: relative;
-      min-width: 728px;
+      min-width: 960px;
       min-height: 50px;
-      flex-shrink: 0;
     }
     .inner-pages-header {
       background-color: #151725;
@@ -40,21 +39,18 @@ export default class ShoppingCart extends LitElement {
       position: relative;
       min-width: 50px;
       min-height: 140px;
-      flex-grow: 1;
-      flex-basis: 0;
     }
     .row-layout {
       display: flex;
     }
     .content {
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
       align-content: flex-start;
       position: relative;
       padding: 48px 24px;
       min-width: 50px;
-      flex-grow: 1;
-      flex-basis: 0;
+      flex-shrink: 0;
     }
     .group {
       justify-content: flex-start;
@@ -69,6 +65,7 @@ export default class ShoppingCart extends LitElement {
       justify-content: flex-start;
       align-items: stretch;
       align-content: flex-start;
+      gap: 40px;
       position: relative;
       min-width: 50px;
       min-height: 50px;
@@ -79,6 +76,7 @@ export default class ShoppingCart extends LitElement {
       align-items: stretch;
       align-content: flex-start;
       position: relative;
+      min-width: 560px;
       min-height: 50px;
       flex-grow: 1;
       flex-basis: 0;
@@ -87,18 +85,20 @@ export default class ShoppingCart extends LitElement {
       justify-content: space-between;
       align-items: center;
       align-content: flex-start;
+      gap: 16px;
       position: relative;
       min-width: 50px;
       min-height: 50px;
     }
     .group_4 {
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
       align-content: flex-start;
-      width: 60%;
-      min-width: 340px;
+      position: relative;
+      min-width: 140px;
       min-height: 50px;
-      flex-shrink: 0;
+      flex-grow: 1;
+      flex-basis: 0;
     }
     .group_5 {
       justify-content: flex-start;
@@ -107,7 +107,6 @@ export default class ShoppingCart extends LitElement {
       position: relative;
       min-width: 50px;
       min-height: 40px;
-      flex-shrink: 0;
     }
     .group_6 {
       background-color: hsla(var(--ig-gray-200));
@@ -120,17 +119,34 @@ export default class ShoppingCart extends LitElement {
       flex-shrink: 0;
     }
     .group_7 {
+      justify-content: flex-end;
+      align-items: center;
+      align-content: flex-start;
+      min-height: 50px;
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+    .group_8 {
+      justify-content: flex-start;
+      align-items: center;
+      align-content: flex-start;
+      position: relative;
+      min-height: 50px;
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+    .group_9 {
       justify-content: flex-start;
       align-items: stretch;
       align-content: flex-start;
       position: relative;
-      margin: 0 0 0 56px;
-      min-width: 280px;
+      min-width: 260px;
       min-height: 50px;
-      max-width: 400px;
-      flex-shrink: 0;
+      max-width: 360px;
+      flex-grow: 1;
+      flex-basis: 0;
     }
-    .group_8 {
+    .group_10 {
       background-color: transparent;
       justify-content: space-between;
       align-items: baseline;
@@ -139,7 +155,7 @@ export default class ShoppingCart extends LitElement {
       min-width: 50px;
       min-height: 32px;
     }
-    .group_9 {
+    .group_11 {
       background-color: transparent;
       justify-content: flex-end;
       align-items: flex-end;
@@ -148,7 +164,7 @@ export default class ShoppingCart extends LitElement {
       min-width: 50px;
       min-height: 32px;
     }
-    .group_10 {
+    .group_12 {
       background-color: transparent;
       justify-content: space-between;
       align-items: baseline;
@@ -158,15 +174,12 @@ export default class ShoppingCart extends LitElement {
       min-width: 50px;
       min-height: 32px;
     }
-    .group_11 {
+    .group_13 {
       background-color: hsla(var(--ig-warn-500));
       justify-content: center;
       align-items: center;
       align-content: flex-start;
-      height: 50px;
-      min-width: 160px;
       min-height: 50px;
-      flex-shrink: 0;
     }
     .sitemap {
       border-color: hsla(var(--ig-gray-200));
@@ -180,10 +193,8 @@ export default class ShoppingCart extends LitElement {
       padding: 24px;
       min-width: 50px;
       min-height: 170px;
-      flex-grow: 1;
-      flex-basis: 0;
     }
-    .group_12 {
+    .group_14 {
       justify-content: flex-start;
       align-items: flex-start;
       align-content: flex-start;
@@ -191,7 +202,7 @@ export default class ShoppingCart extends LitElement {
       min-width: 50px;
       min-height: 50px;
     }
-    .group_13 {
+    .group_15 {
       justify-content: flex-start;
       align-items: stretch;
       align-content: flex-start;
@@ -210,12 +221,11 @@ export default class ShoppingCart extends LitElement {
       gap: 16px;
       position: relative;
       padding: 0 24px;
+      height: 50px;
       min-width: 50px;
       min-height: 50px;
-      flex-grow: 1;
-      flex-shrink: 0;
     }
-    .group_14 {
+    .group_16 {
       justify-content: center;
       align-items: center;
       align-content: flex-start;
@@ -246,7 +256,6 @@ export default class ShoppingCart extends LitElement {
     }
     .text_1 {
       height: max-content;
-      min-width: min-content;
     }
     .text_2 {
       margin: 0 8px 0 0;
@@ -262,7 +271,6 @@ export default class ShoppingCart extends LitElement {
     }
     .text_4 {
       text-align: right;
-      margin: 0 0 0 60px;
       height: max-content;
       min-width: min-content;
     }
@@ -271,6 +279,10 @@ export default class ShoppingCart extends LitElement {
       width: 18px;
       height: 18px;
       color: hsla(var(--ig-gray-600));
+    }
+    .text_5 {
+      height: max-content;
+      min-width: 140px;
     }
     .h6 {
       margin: 0 0 24px;
@@ -287,28 +299,27 @@ export default class ShoppingCart extends LitElement {
       min-width: min-content;
       flex-shrink: 0;
     }
-    .text_7 {
-      text-align: right;
-      height: max-content;
-      min-width: min-content;
-    }
     .hyperlink {
       color: hsla(var(--ig-primary-500));
       height: max-content;
       min-width: min-content;
     }
-    .text_5 {
+    .text_6 {
+      height: max-content;
+      min-width: min-content;
+    }
+    .text_7 {
       margin: 8px 0 0;
       height: max-content;
       min-width: min-content;
     }
-    .text_6 {
+    .text_8 {
       color: hsla(var(--ig-gray-800));
       height: max-content;
       min-width: min-content;
       flex-shrink: 0;
     }
-    .text_8 {
+    .text_9 {
       color: hsla(var(--ig-gray-700));
       height: max-content;
       min-width: min-content;
@@ -354,32 +365,34 @@ export default class ShoppingCart extends LitElement {
                     </div>
                     <div>
                       <div class="row-layout group_3">
-                        <p class="typography__body-1 text_1">
-                          Gold Alternator 
-                        </p>
                         <div class="row-layout group_4">
-                          <div class="row-layout group_5">
-                            <p class="typography__body-1 text_2">
-                              Qty:
+                          <p class="typography__body-1 text_1">
+                            Gold Alternator 
+                          </p>
+                        </div>
+                        <div class="row-layout group_5">
+                          <p class="typography__body-1 text_2">
+                            Qty:
+                          </p>
+                          <div class="row-layout group_6">
+                            <igc-icon-button variant="flat">
+                              <span class="material-icons">
+                                remove
+                              </span>
+                              <igc-ripple></igc-ripple>
+                            </igc-icon-button>
+                            <p class="typography__body-1 text_3">
+                              1
                             </p>
-                            <div class="row-layout group_6">
-                              <igc-icon-button variant="flat">
-                                <span class="material-icons">
-                                  remove
-                                </span>
-                                <igc-ripple></igc-ripple>
-                              </igc-icon-button>
-                              <p class="typography__body-1 text_3">
-                                1
-                              </p>
-                              <igc-icon-button variant="flat">
-                                <span class="material-icons">
-                                  add
-                                </span>
-                                <igc-ripple></igc-ripple>
-                              </igc-icon-button>
-                            </div>
+                            <igc-icon-button variant="flat">
+                              <span class="material-icons">
+                                add
+                              </span>
+                              <igc-ripple></igc-ripple>
+                            </igc-icon-button>
                           </div>
+                        </div>
+                        <div class="row-layout group_7">
                           <p class="typography__body-1 text_4">
                             $59.90
                           </p>
@@ -398,32 +411,34 @@ export default class ShoppingCart extends LitElement {
                     </div>
                     <div>
                       <div class="row-layout group_3">
-                        <p class="typography__body-1 text_1">
-                          Tail Lamp Assembly
-                        </p>
-                        <div class="row-layout group_4">
-                          <div class="row-layout group_5">
-                            <p class="typography__body-1 text_2">
-                              Qty:
+                        <div class="row-layout group_8">
+                          <p class="typography__body-1 text_5">
+                            Tail Lamp Assembly
+                          </p>
+                        </div>
+                        <div class="row-layout group_5">
+                          <p class="typography__body-1 text_2">
+                            Qty:
+                          </p>
+                          <div class="row-layout group_6">
+                            <igc-icon-button variant="flat">
+                              <span class="material-icons">
+                                remove
+                              </span>
+                              <igc-ripple></igc-ripple>
+                            </igc-icon-button>
+                            <p class="typography__body-1 text_3">
+                              1
                             </p>
-                            <div class="row-layout group_6">
-                              <igc-icon-button variant="flat">
-                                <span class="material-icons">
-                                  remove
-                                </span>
-                                <igc-ripple></igc-ripple>
-                              </igc-icon-button>
-                              <p class="typography__body-1 text_3">
-                                1
-                              </p>
-                              <igc-icon-button variant="flat">
-                                <span class="material-icons">
-                                  add
-                                </span>
-                                <igc-ripple></igc-ripple>
-                              </igc-icon-button>
-                            </div>
+                            <igc-icon-button variant="flat">
+                              <span class="material-icons">
+                                add
+                              </span>
+                              <igc-ripple></igc-ripple>
+                            </igc-icon-button>
                           </div>
+                        </div>
+                        <div class="row-layout group_7">
                           <p class="typography__body-1 text_4">
                             $19.50
                           </p>
@@ -442,34 +457,36 @@ export default class ShoppingCart extends LitElement {
                     </div>
                     <div>
                       <div class="row-layout group_3">
-                        <p class="typography__body-1 text_1">
-                          Winter Tires Set
-                        </p>
-                        <div class="row-layout group_4">
-                          <div class="row-layout group_5">
-                            <p class="typography__body-1 text_2">
-                              Qty:
+                        <div class="row-layout group_8">
+                          <p class="typography__body-1 text_5">
+                            Winter Tires Set
+                          </p>
+                        </div>
+                        <div class="row-layout group_5">
+                          <p class="typography__body-1 text_2">
+                            Qty:
+                          </p>
+                          <div class="row-layout group_6">
+                            <igc-icon-button variant="flat">
+                              <span class="material-icons">
+                                remove
+                              </span>
+                              <igc-ripple></igc-ripple>
+                            </igc-icon-button>
+                            <p class="typography__body-1 text_3">
+                              1
                             </p>
-                            <div class="row-layout group_6">
-                              <igc-icon-button variant="flat">
-                                <span class="material-icons">
-                                  remove
-                                </span>
-                                <igc-ripple></igc-ripple>
-                              </igc-icon-button>
-                              <p class="typography__body-1 text_3">
-                                1
-                              </p>
-                              <igc-icon-button variant="flat">
-                                <span class="material-icons">
-                                  add
-                                </span>
-                                <igc-ripple></igc-ripple>
-                              </igc-icon-button>
-                            </div>
+                            <igc-icon-button variant="flat">
+                              <span class="material-icons">
+                                add
+                              </span>
+                              <igc-ripple></igc-ripple>
+                            </igc-icon-button>
                           </div>
+                        </div>
+                        <div class="row-layout group_7">
                           <p class="typography__body-1 text_4">
-                            $41.50
+                            $59.90
                           </p>
                         </div>
                       </div>
@@ -486,34 +503,36 @@ export default class ShoppingCart extends LitElement {
                     </div>
                     <div>
                       <div class="row-layout group_3">
-                        <p class="typography__body-1 text_1">
-                          Oil Filter
-                        </p>
                         <div class="row-layout group_4">
-                          <div class="row-layout group_5">
-                            <p class="typography__body-1 text_2">
-                              Qty:
+                          <p class="typography__body-1 text_1">
+                            Oil Filter
+                          </p>
+                        </div>
+                        <div class="row-layout group_5">
+                          <p class="typography__body-1 text_2">
+                            Qty:
+                          </p>
+                          <div class="row-layout group_6">
+                            <igc-icon-button variant="flat">
+                              <span class="material-icons">
+                                remove
+                              </span>
+                              <igc-ripple></igc-ripple>
+                            </igc-icon-button>
+                            <p class="typography__body-1 text_3">
+                              1
                             </p>
-                            <div class="row-layout group_6">
-                              <igc-icon-button variant="flat">
-                                <span class="material-icons">
-                                  remove
-                                </span>
-                                <igc-ripple></igc-ripple>
-                              </igc-icon-button>
-                              <p class="typography__body-1 text_3">
-                                1
-                              </p>
-                              <igc-icon-button variant="flat">
-                                <span class="material-icons">
-                                  add
-                                </span>
-                                <igc-ripple></igc-ripple>
-                              </igc-icon-button>
-                            </div>
+                            <igc-icon-button variant="flat">
+                              <span class="material-icons">
+                                add
+                              </span>
+                              <igc-ripple></igc-ripple>
+                            </igc-icon-button>
                           </div>
+                        </div>
+                        <div class="row-layout group_7">
                           <p class="typography__body-1 text_4">
-                            $49.50
+                            $59.90
                           </p>
                         </div>
                       </div>
@@ -530,34 +549,36 @@ export default class ShoppingCart extends LitElement {
                     </div>
                     <div>
                       <div class="row-layout group_3">
-                        <p class="typography__body-1 text_1">
-                          Headlight Assembly
-                        </p>
-                        <div class="row-layout group_4">
-                          <div class="row-layout group_5">
-                            <p class="typography__body-1 text_2">
-                              Qty:
+                        <div class="row-layout group_8">
+                          <p class="typography__body-1 text_5">
+                            Headlight Assembly
+                          </p>
+                        </div>
+                        <div class="row-layout group_5">
+                          <p class="typography__body-1 text_2">
+                            Qty:
+                          </p>
+                          <div class="row-layout group_6">
+                            <igc-icon-button variant="flat">
+                              <span class="material-icons">
+                                remove
+                              </span>
+                              <igc-ripple></igc-ripple>
+                            </igc-icon-button>
+                            <p class="typography__body-1 text_3">
+                              1
                             </p>
-                            <div class="row-layout group_6">
-                              <igc-icon-button variant="flat">
-                                <span class="material-icons">
-                                  remove
-                                </span>
-                                <igc-ripple></igc-ripple>
-                              </igc-icon-button>
-                              <p class="typography__body-1 text_3">
-                                1
-                              </p>
-                              <igc-icon-button variant="flat">
-                                <span class="material-icons">
-                                  add
-                                </span>
-                                <igc-ripple></igc-ripple>
-                              </igc-icon-button>
-                            </div>
+                            <igc-icon-button variant="flat">
+                              <span class="material-icons">
+                                add
+                              </span>
+                              <igc-ripple></igc-ripple>
+                            </igc-icon-button>
                           </div>
+                        </div>
+                        <div class="row-layout group_7">
                           <p class="typography__body-1 text_4">
-                            $29.90
+                            $59.90
                           </p>
                         </div>
                       </div>
@@ -570,11 +591,11 @@ export default class ShoppingCart extends LitElement {
                   </igc-list-item>
                 </igc-list>
               </div>
-              <div class="column-layout group_7">
+              <div class="column-layout group_9">
                 <h6 class="h6">
                   Cart totals
                 </h6>
-                <div class="row-layout group_8">
+                <div class="row-layout group_10">
                   <p class="typography__subtitle-2 content_1">
                     Subtotal
                   </p>
@@ -582,7 +603,7 @@ export default class ShoppingCart extends LitElement {
                     $198.30
                   </p>
                 </div>
-                <div class="row-layout group_8">
+                <div class="row-layout group_10">
                   <p class="typography__subtitle-2 content_1">
                     Shipping
                   </p>
@@ -590,15 +611,15 @@ export default class ShoppingCart extends LitElement {
                     $0
                   </p>
                 </div>
-                <div class="column-layout group_9">
-                  <p class="typography__body-2 text_7">
+                <div class="column-layout group_11">
+                  <p class="typography__body-2 text_4">
                     Shipping wiil be calculated at checkout
                   </p>
                   <a class="typography__body-2 hyperlink">
                     Estimate shipping
                   </a>
                 </div>
-                <div class="row-layout group_10">
+                <div class="row-layout group_12">
                   <h6 class="content_1">
                     Total
                   </h6>
@@ -606,7 +627,7 @@ export default class ShoppingCart extends LitElement {
                     $198.30
                   </h6>
                 </div>
-                <div class="row-layout group_11">
+                <div class="row-layout group_13">
                   <igc-button variant="flat" class="button">
                     PROCEED TO CHECKOUT
                     <igc-ripple></igc-ripple>
@@ -617,104 +638,104 @@ export default class ShoppingCart extends LitElement {
           </div>
         </div>
         <div class="row-layout sitemap">
-          <div class="column-layout group_12">
-            <p class="typography__subtitle-2 text_1">
+          <div class="column-layout group_14">
+            <p class="typography__subtitle-2 text_6">
               Contact Us
             </p>
-            <p class="typography__body-2 text_1">
+            <p class="typography__body-2 text_6">
               1234 Street Name, CityName, ST
             </p>
-            <p class="typography__body-2 text_1">
+            <p class="typography__body-2 text_6">
                10520 United States
             </p>
-            <p class="typography__subtitle-2 text_5">
+            <p class="typography__subtitle-2 text_7">
               Phone Number
             </p>
-            <p class="typography__body-2 text_1">
+            <p class="typography__body-2 text_6">
               1-234-567-8901
             </p>
           </div>
-          <div class="column-layout group_13">
-            <p class="typography__subtitle-2 text_1">
+          <div class="column-layout group_15">
+            <p class="typography__subtitle-2 text_6">
               Help
             </p>
-            <p class="typography__body-2 text_1">
+            <p class="typography__body-2 text_6">
               FAQ
             </p>
-            <p class="typography__body-2 text_1">
+            <p class="typography__body-2 text_6">
               Returns
             </p>
-            <p class="typography__body-2 text_1">
+            <p class="typography__body-2 text_6">
               Coupons &amp; Discounts
             </p>
-            <p class="typography__body-2 text_1">
+            <p class="typography__body-2 text_6">
               Shipping &amp; Returns
             </p>
           </div>
-          <div class="column-layout group_13">
-            <p class="typography__subtitle-2 text_1">
+          <div class="column-layout group_15">
+            <p class="typography__subtitle-2 text_6">
               About Us
             </p>
-            <p class="typography__body-2 text_1">
+            <p class="typography__body-2 text_6">
               Company Info
             </p>
-            <p class="typography__body-2 text_1">
+            <p class="typography__body-2 text_6">
               Press Releases
             </p>
-            <p class="typography__body-2 text_1">
+            <p class="typography__body-2 text_6">
               Careers
             </p>
-            <p class="typography__body-2 text_1">
+            <p class="typography__body-2 text_6">
               Reviews
             </p>
           </div>
-          <div class="column-layout group_13">
-            <p class="typography__subtitle-2 text_1">
+          <div class="column-layout group_15">
+            <p class="typography__subtitle-2 text_6">
               Services
             </p>
-            <p class="typography__body-2 text_1">
+            <p class="typography__body-2 text_6">
               Buy Online
             </p>
-            <p class="typography__body-2 text_1">
+            <p class="typography__body-2 text_6">
               In-Store
             </p>
-            <p class="typography__body-2 text_1">
+            <p class="typography__body-2 text_6">
               Repair Help
             </p>
-            <p class="typography__body-2 text_1">
+            <p class="typography__body-2 text_6">
               Find a Repair Shop
             </p>
           </div>
-          <div class="column-layout group_13">
-            <p class="typography__subtitle-2 text_1">
+          <div class="column-layout group_15">
+            <p class="typography__subtitle-2 text_6">
               Blog
             </p>
-            <p class="typography__body-2 text_1">
+            <p class="typography__body-2 text_6">
               Car Building Basics
             </p>
-            <p class="typography__body-2 text_1">
+            <p class="typography__body-2 text_6">
               Do it Yourself
             </p>
-            <p class="typography__body-2 text_1">
+            <p class="typography__body-2 text_6">
               Your Home Workshop
             </p>
-            <p class="typography__body-2 text_1">
+            <p class="typography__body-2 text_6">
               Advanced Bulding
             </p>
           </div>
         </div>
         <div class="row-layout footer">
-          <p class="typography__body-2 text_6">
+          <p class="typography__body-2 text_8">
             Copyright ©2021 AutoShop.com, Inc. All Rights Reserved.
           </p>
-          <div class="row-layout group_14">
-            <p class="typography__body-2 text_8">
+          <div class="row-layout group_16">
+            <p class="typography__body-2 text_9">
               Terms of Use
             </p>
-            <p class="typography__body-2 text_8">
+            <p class="typography__body-2 text_9">
               Privacy Policy
             </p>
-            <p class="typography__body-2 text_8">
+            <p class="typography__body-2 text_9">
               Site Map
             </p>
           </div>

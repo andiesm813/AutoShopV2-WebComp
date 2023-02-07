@@ -25,9 +25,8 @@ export default class ProductDetails extends LitElement {
       justify-content: flex-start;
       align-items: stretch;
       align-content: flex-start;
-      overflow: auto;
       position: relative;
-      min-width: 830px;
+      min-width: 960px;
       min-height: 50px;
       flex-grow: 1;
       flex-shrink: 0;
@@ -43,7 +42,6 @@ export default class ProductDetails extends LitElement {
       position: relative;
       min-width: 50px;
       min-height: 140px;
-      flex-shrink: 0;
     }
     .content {
       justify-content: flex-start;
@@ -52,7 +50,6 @@ export default class ProductDetails extends LitElement {
       position: relative;
       padding: 48px 24px;
       min-width: 50px;
-      flex-shrink: 0;
     }
     .group {
       justify-content: flex-start;
@@ -60,7 +57,6 @@ export default class ProductDetails extends LitElement {
       align-content: flex-start;
       min-width: 50px;
       max-width: 1680px;
-      flex-grow: 1;
       flex-shrink: 0;
     }
     .row-layout {
@@ -106,40 +102,55 @@ export default class ProductDetails extends LitElement {
       background-image: url("/src/assets/Alternator1.jpg");
       background-size: cover;
       background-repeat: no-repeat;
+      border-color: hsla(var(--ig-gray-200));
+      border-width: 1px;
+      border-style: solid;
       justify-content: flex-start;
       align-items: stretch;
       align-content: flex-start;
       position: relative;
-      min-width: 80px;
-      min-height: 80px;
-      max-width: 100px;
-      max-height: 100px;
+      min-width: 100px;
+      min-height: 100px;
     }
     .thumb-2 {
       background-image: url("/src/assets/Alternator2.png");
       background-size: cover;
       background-repeat: no-repeat;
+      border-color: hsla(var(--ig-gray-200));
+      border-width: 1px;
+      border-style: solid;
       justify-content: flex-start;
       align-items: stretch;
       align-content: flex-start;
       position: relative;
-      min-width: 80px;
-      min-height: 80px;
-      max-width: 100px;
-      max-height: 100px;
+      min-width: 100px;
+      min-height: 100px;
     }
-    .thumb {
+    .thumb-3 {
       background-image: url("/src/assets/Alternator3.png");
       background-size: cover;
       background-repeat: no-repeat;
+      border-color: hsla(var(--ig-gray-200));
+      border-width: 1px;
+      border-style: solid;
       justify-content: flex-start;
       align-items: stretch;
       align-content: flex-start;
       position: relative;
-      min-width: 80px;
-      min-height: 80px;
-      max-width: 100px;
-      max-height: 100px;
+      min-width: 100px;
+      min-height: 100px;
+    }
+    .product-image {
+      border-color: hsla(var(--ig-gray-200));
+      border-width: 1px;
+      border-style: solid;
+      justify-content: flex-start;
+      align-items: stretch;
+      align-content: flex-start;
+      position: relative;
+      min-width: 240px;
+      min-height: 50px;
+      max-width: 560px;
     }
     .group_3 {
       flex-wrap: wrap;
@@ -148,8 +159,9 @@ export default class ProductDetails extends LitElement {
       align-content: flex-start;
       gap: 8px;
       position: relative;
+      min-width: 400px;
       min-height: 50px;
-      flex-grow: 2;
+      flex-grow: 1;
       flex-basis: 0;
     }
     .group_4 {
@@ -182,11 +194,11 @@ export default class ProductDetails extends LitElement {
       align-content: flex-start;
       position: relative;
       margin: 0 40px 0 0;
-      min-width: 280px;
+      min-width: 240px;
       min-height: 50px;
-      max-width: 500px;
+      max-width: 400px;
       flex-grow: 1;
-      flex-basis: 30%;
+      flex-basis: 0;
     }
     .group_8 {
       background-color: transparent;
@@ -213,9 +225,9 @@ export default class ProductDetails extends LitElement {
       position: relative;
       min-width: 50px;
       min-height: 50px;
-      max-width: 720px;
-      flex-grow: 1;
-      flex-basis: 70%;
+      max-width: 800px;
+      flex-grow: 2;
+      flex-basis: 0;
     }
     .group_11 {
       flex-wrap: wrap;
@@ -260,7 +272,6 @@ export default class ProductDetails extends LitElement {
       padding: 24px;
       min-width: 50px;
       min-height: 170px;
-      flex-shrink: 0;
     }
     .group_14 {
       justify-content: flex-start;
@@ -292,7 +303,6 @@ export default class ProductDetails extends LitElement {
       height: 50px;
       min-width: 50px;
       min-height: 50px;
-      flex-shrink: 0;
     }
     .group_16 {
       justify-content: center;
@@ -339,14 +349,8 @@ export default class ProductDetails extends LitElement {
       min-width: min-content;
       flex-shrink: 0;
     }
-    .product-image {
+    .large-image {
       object-fit: contain;
-      min-width: 280px;
-      min-height: 280px;
-      max-width: 560px;
-      max-height: 560px;
-      flex-grow: 1;
-      flex-basis: 0;
     }
     .content_1 {
       height: max-content;
@@ -559,9 +563,11 @@ export default class ProductDetails extends LitElement {
                 <div class="column-layout thumbs">
                   <div class="row-layout thumb-1"></div>
                   <div class="row-layout thumb-2"></div>
-                  <div class="row-layout thumb"></div>
+                  <div class="row-layout thumb-3"></div>
                 </div>
-                <img src="/src/assets/Alternator1.jpg" class="product-image" />
+                <div class="row-layout product-image">
+                  <img src="/src/assets/Alternator1.jpg" class="large-image" />
+                </div>
               </div>
               <div class="column-layout group_3">
                 <h5 class="content_1">

@@ -25,9 +25,8 @@ export default class Home extends LitElement {
       justify-content: flex-start;
       align-items: stretch;
       align-content: flex-start;
-      overflow: auto;
       position: relative;
-      min-width: 728px;
+      min-width: 960px;
       min-height: 50px;
       flex-grow: 1;
       flex-shrink: 0;
@@ -47,8 +46,6 @@ export default class Home extends LitElement {
       position: relative;
       padding: 24px;
       min-height: 240px;
-      flex-grow: 1;
-      flex-basis: 0;
     }
     .group {
       justify-content: flex-start;
@@ -97,8 +94,6 @@ export default class Home extends LitElement {
       padding: 48px 24px;
       min-width: 50px;
       min-height: 50px;
-      flex-grow: 1;
-      flex-shrink: 0;
     }
     .group_4 {
       flex-wrap: wrap;
@@ -137,8 +132,6 @@ export default class Home extends LitElement {
       padding: 24px;
       min-width: 50px;
       min-height: 170px;
-      flex-grow: 1;
-      flex-basis: 0;
     }
     .group_6 {
       justify-content: flex-start;
@@ -169,8 +162,6 @@ export default class Home extends LitElement {
       padding: 0 24px;
       min-width: 50px;
       min-height: 50px;
-      flex-grow: 1;
-      flex-basis: 0;
     }
     .group_8 {
       justify-content: center;
@@ -248,14 +239,14 @@ export default class Home extends LitElement {
     }
     .select {
       height: max-content;
-      min-width: 100px;
+      min-width: 120px;
       flex-grow: 1;
       flex-basis: 0;
     }
     .button {
       height: max-content;
       min-width: min-content;
-      flex-grow: 1;
+      max-width: 180px;
       flex-shrink: 0;
     }
     .button_1 {
