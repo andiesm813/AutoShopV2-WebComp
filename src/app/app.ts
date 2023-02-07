@@ -16,6 +16,7 @@ export default class App extends LitElement {
       justify-content: flex-start;
       align-items: stretch;
       align-content: flex-start;
+      overflow: auto;
     }
     .row-layout {
       display: flex;
@@ -79,7 +80,7 @@ export default class App extends LitElement {
       <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet'>
       <link rel='stylesheet' href='../../ig-theme.css'>
       <div class="row-layout group">
-        <img src="/src/assets/AutoShop_Logo.png" @click="${() => Router.go('/home')}" class="image" />
+        <img src="/src/assets/AutoShop_Logo.svg" @click="${() => Router.go('/home')}" class="image" />
         <div class="row-layout group_1">
           <igc-button variant="flat" @click="${() => Router.go('/all-products')}" class="button">
             Auto Body Parts
