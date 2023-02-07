@@ -25,9 +25,8 @@ export default class AllProducts extends LitElement {
       justify-content: flex-start;
       align-items: stretch;
       align-content: flex-start;
-      overflow: auto;
       position: relative;
-      min-width: 728px;
+      min-width: 960px;
       min-height: 50px;
       flex-shrink: 0;
     }
@@ -42,8 +41,6 @@ export default class AllProducts extends LitElement {
       position: relative;
       min-width: 50px;
       min-height: 140px;
-      flex-grow: 1;
-      flex-basis: 0;
     }
     .row-layout {
       display: flex;
@@ -56,7 +53,6 @@ export default class AllProducts extends LitElement {
       padding: 48px 24px;
       min-width: 50px;
       min-height: 50px;
-      flex-grow: 1;
       flex-shrink: 0;
     }
     .group {
@@ -141,8 +137,6 @@ export default class AllProducts extends LitElement {
       padding: 24px;
       min-width: 50px;
       min-height: 170px;
-      flex-grow: 1;
-      flex-basis: 0;
     }
     .group_7 {
       justify-content: flex-start;
@@ -173,8 +167,6 @@ export default class AllProducts extends LitElement {
       padding: 0 24px;
       min-width: 50px;
       min-height: 50px;
-      flex-grow: 1;
-      flex-basis: 0;
     }
     .group_9 {
       justify-content: center;
